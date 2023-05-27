@@ -1,21 +1,16 @@
 import Input from "../../components/Input";
+import Button from "../../components/Button";
+import ConectByFacebook from "../../components/ConectByFacebook";
 function FormRegister({ data, setDataInput }) {
+  const text = "Siguiente";
   return (
-    <fieldset className="user">
-      <button className="enter__button" to="/">
-        <i className="fa-brands fa-square-facebook enter__icon"></i> Iniciar
-        sesión con Facebook
-      </button>
-      <div className="enter__line--container">
-        <span className="enter__line"></span>
-        <span>O</span>
-        <span className="enter__line"></span>
-      </div>
+    <fieldset className="register__container">
+      <ConectByFacebook></ConectByFacebook>
       <Input
         value={data.mail}
         name="mail"
         id="mail"
-        placeholder="Correo electrónico"
+        placeholder="Número de móvil o correo electrónico"
         setDataInput={setDataInput}
       />
       <Input
@@ -29,7 +24,7 @@ function FormRegister({ data, setDataInput }) {
         value={data.user}
         name="user"
         id="user"
-        placeholder="Usuario"
+        placeholder="Nombre de usuario"
         setDataInput={setDataInput}
       />
       <Input
@@ -39,15 +34,50 @@ function FormRegister({ data, setDataInput }) {
         placeholder="Contraseña"
         setDataInput={setDataInput}
       />
-      <h2 className="user__info">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-        tempore, rem dolorum ipsa sit in voluptatem corporis recusandae sapiente
-        ut amet, repellat suscipit ipsum, omnis doloribus. Dicta dolores officia
-        neque.
+      <h2 className="register__info">
+        Es posible que los usuarios de nuestro servicio hayan subido tu
+        información de contacto en Instagram.
+        <a
+          className="register__info--link"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.facebook.com/help/instagram/261704639352628"
+        >
+          Más información
+        </a>
       </h2>
-      <button className="user__button" to="/">
-        Siguiente
-      </button>
+      <h2 className="register__info">
+        Al registrarte, aceptas nuestras{" "}
+        <a
+          className="register__info--link"
+          target="_blank"
+          rel="noreferrer"
+          href="https://help.instagram.com/581066165581870/?locale=es_ES"
+        >
+          Condiciones.{" "}
+        </a>
+        Obtén más información sobre cómo recopilamos, usamos y compartimos tu
+        información en la{" "}
+        <a
+          className="register__info--link"
+          target="_blank"
+          rel="noreferrer"
+          href="https://help.instagram.com/581066165581870/?locale=es_ES"
+        >
+          Política de privacidad
+        </a>
+        , así como el uso que hacemos de las cookies y tecnologías similares en
+        nuestra{" "}
+        <a
+          className="register__info--link"
+          target="_blank"
+          rel="noreferrer"
+          href="https://help.instagram.com/581066165581870/?locale=es_ES"
+        >
+          Política de cookies.
+        </a>
+      </h2>
+      <Button text={text}></Button>
     </fieldset>
   );
 }

@@ -1,0 +1,29 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  padding: 15px 35px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+  }
+  &__info {
+    padding: 5px 10px;
+    text-align: center;
+    letter-spacing: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: grey;
+
+    &--link {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,47 +1,33 @@
-function FormEnter() {
-  return (
-    <fieldset className="user">
-      <button className="enter__button" to="/">
-        <i className="fa-brands fa-square-facebook enter__icon"></i> Continuar
-        con Facebook
-      </button>
-      <div className="enter__line--container">
-        <span className="enter__line"></span>
-        <span>O</span>
-        <span className="enter__line"></span>
-      </div>
-      <input
-        type="text"
-        className="user__input"
-        value=""
-        name="autor"
-        id="autor"
-        placeholder="Usuario"
-      />
+import Input from "../../components/Input";
+import Button from "../../components/Button";
+import ConectByFacebook from "../../components/ConectByFacebook";
 
-      <input
-        type="text"
-        className="user__input"
-        value=""
-        name="password"
-        id="password"
-        placeholder="Contraseña"
-      />
-      <label className="user__label">
-        <input
-          type="checkbox"
-          name="storage"
-          id="storage"
-          value=""
-          className="user__check"
+function FormEnter({ data, setDataInput }) {
+  const text = "Entrar";
+  const fromRegister = "colorReverse";
+  return (
+    <>
+      <fieldset className="enter__container">
+        <Input
+          value={data.user}
+          name="user"
+          id="user"
+          placeholder="Teléfono, usuario o correo electrónico"
+          setDataInput={setDataInput}
         />
-        Guardar datos de inicio de sesión
-      </label>
-      <h2 className="user__link">¿Has olvidado la contraseña?</h2>
-      <button className="user__button" to="/">
-        Entrar
-      </button>
-    </fieldset>
+        <Input
+          value={data.password}
+          name="password"
+          id="password"
+          placeholder="Contraseña"
+          setDataInput={setDataInput}
+        />
+        <Button text={text}></Button>
+        <ConectByFacebook fromRegister={fromRegister}></ConectByFacebook>
+
+        <h2 className="enter__forgetPassword">¿Has olvidado la contraseña?</h2>
+      </fieldset>
+    </>
   );
 }
 

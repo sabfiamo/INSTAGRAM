@@ -1,0 +1,62 @@
+@import "../core/variables";
+
+.facebook {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__orderReverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    min-width: 270px;
+    color: white;
+    text-align: center;
+    border: none;
+    background-color: $blue-dark;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    gap: 5px;
+    margin: 15px 0;
+  }
+  &__button:hover {
+    background-color: $blue-dark-two;
+  }
+  &__line {
+    min-width: 115px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  &__o {
+    font-size: 12px;
+    padding: 0 10px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  &__line--container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon {
+    color: white;
+    font-size: 18px;
+  }
+  &__button.colorReverse {
+    color: $blue-dark-three;
+    background-color: white;
+  }
+  &__icon.colorReverse {
+    color: $blue-dark-three;
+  }
+}

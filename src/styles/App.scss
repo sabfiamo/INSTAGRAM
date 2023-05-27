@@ -1,48 +1,10 @@
-:root {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  // font-family: "Montserrat", sans-serif;
-}
-
 @import "core/variables";
 @import "core/reset";
 @import "pages/enter";
 
-.user {
+.App {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
   align-items: center;
-
-  &__button {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    align-items: center;
-    font-size: 1rem;
-    width: 250px;
-    color: white;
-    text-align: center;
-    border: none;
-    height: 25px;
-    background-color: $blue;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 12px;
-  }
-  &__info {
-    width: 250px;
-    text-align: center;
-    letter-spacing: normal;
-    font-size: 12px;
-    line-height: 16px;
-    color: grey;
-  }
+  padding: 20px;
 }
