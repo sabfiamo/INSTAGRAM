@@ -1,14 +1,26 @@
 import "../styles/layout/footer.scss";
+
 function Footer() {
   return (
-    <>
-      <div className="footer__registre">
-        <h2 className="footer__info">
-          ¿Tienes cuenta? <span className="blue">Entrar</span>
-        </h2>
+    <footer className="footer">
+      <div className="footer__container">
+        <p className="footer__text">Made by Mónica</p>
+        <a
+          href="https://github.com/sabfiamo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fa-brands fa-github-alt"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/monica-saborido/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fa-brands fa-linkedin"></i>
+        </a>
       </div>
-    </>
+    </footer>
   );
 }
-
 export default Footer;

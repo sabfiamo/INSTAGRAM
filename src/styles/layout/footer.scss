@@ -1,8 +1,45 @@
+@import "../core/variables.scss";
+
 .footer {
-  &__registre {
-    font-size: 12px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 2px white;
+  height: 8vh;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  @media (min-width: 700px) {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  &__registre .blue {
-    color: blue;
+  &__text {
+    color: white;
+    margin-top: 5px;
+    font-family: $fasthand;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    padding: 20px;
+  }
+  &__logo {
+    height: 92px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.fa-brands {
+  color: white;
+  margin: 5px 0 0 10px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(140%);
+  }
+  @media (min-width: 700px) {
+    font-size: 20px;
   }
 }
