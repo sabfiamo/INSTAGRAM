@@ -78,6 +78,8 @@
     &--content {
       background-image: url(../../images/screenshot1.png);
       animation: cambio 16s infinite linear alternate;
+      transition: all 0.5s ease-in-out;
+
       background-size: cover;
       background-position: top;
 
@@ -85,7 +87,6 @@
       position: relative;
       transform: translate(130px, 30px);
 
-      transition: all 0.5s ease-in-out;
       height: 85%;
       @media (max-width: 768px) {
         display: none;

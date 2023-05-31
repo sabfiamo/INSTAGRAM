@@ -3,6 +3,7 @@ import Button from "../../components/Button";
 import ConectByFacebook from "../../components/ConectByFacebook";
 function FormRegister({ data, setDataInput }) {
   const text = "Siguiente";
+  const toRouter = "/";
   return (
     <fieldset className="register__container">
       <ConectByFacebook></ConectByFacebook>
@@ -77,7 +78,7 @@ function FormRegister({ data, setDataInput }) {
           Política de cookies.
         </a>
       </h2>
-      <Button text={text}></Button>
+      <Button text={text} toRouter={toRouter}></Button>
     </fieldset>
   );
 }

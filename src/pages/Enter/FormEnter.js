@@ -4,6 +4,7 @@ import ConectByFacebook from "../../components/ConectByFacebook";
 
 function FormEnter({ data, setDataInput }) {
   const text = "Entrar";
+  const toRouter="/profile"
   const fromRegister = "colorReverse";
   return (
     <>
@@ -22,7 +23,7 @@ function FormEnter({ data, setDataInput }) {
           placeholder="Contraseña"
           setDataInput={setDataInput}
         />
-        <Button text={text}></Button>
+        <Button text={text} toRouter={toRouter}></Button>
         <ConectByFacebook fromRegister={fromRegister}></ConectByFacebook>
 
         <h2 className="enter__forgetPassword">¿Has olvidado la contraseña?</h2>

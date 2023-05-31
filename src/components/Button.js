@@ -1,10 +1,11 @@
 import "../styles/layout/button.scss";
-function Button({ text }) {
+import { Link } from "react-router-dom";
+function Button({ text, toRouter }) {
   return (
     <>
-      <button className="button" to="/">
+      <Link className="button" to={toRouter}>
         {text}
-      </button>
+      </Link>
     </>
   );
 }
